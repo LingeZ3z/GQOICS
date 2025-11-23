@@ -1199,7 +1199,7 @@ function renderStartPageUI(){
   const grid = document.getElementById('start-prov-grid');
   if(!grid) return;
   grid.innerHTML = '';
-  for(let k in PROVINCES){ let p=PROVINCES[k]; let btn=document.createElement('button'); btn.className='prov-btn'; btn.textContent=p.name; btn.dataset.val=k; btn.onclick=()=>{document.querySelectorAll('#start-prov-grid .prov-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}; grid.appendChild(btn);}  
+  for(let k in GQPROVINCES){ let p=GQPROVINCES[k]; let btn=document.createElement('button'); btn.className='prov-btn'; btn.textContent=p.name; btn.dataset.val=k; btn.onclick=()=>{document.querySelectorAll('#start-prov-grid .prov-btn').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');}; grid.appendChild(btn);}  
   if(grid.firstChild) grid.firstChild.classList.add('selected');
 }
 
